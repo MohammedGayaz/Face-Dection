@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+</head>
+<body style="text-align:center">
+
+   {% with messages = get_flashed_messages() %}
+         {% if messages %}
+               {% for message in messages %}
+                    <p>{{ message }}</p>
+               {% endfor %}
+         {% endif %}
+      {% endwith %}
+
+
+    <h1>Student Login.</h1>
+        <form method="post" id="f" action="{{ url_for('login') }}">
+
+            <label for="usn">USN Number</label><br>
+            <input type="text" name="usn" id=""><br><br>
+
+            <label for="password">Password</label><br>
+            <input type="password" name="password"><br><br>
+            
+            <input type="submit" name="login" value="Submit">
+            <input type="submit" name="register" value="Register">
+            <script>
+            function myfun(){
+            var txt;
+                if (confirm(Press a button")){
+                txt = "You pressed ok";
+                } else {
+                txt = "you presses cancel";
+                }
+                documnet.getElementBy("f").innerHTML = txt;
+                }
+            </script>
+        </form>
+</body>
+</html>

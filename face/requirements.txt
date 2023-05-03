@@ -1,0 +1,8 @@
+cmake
+dlib
+face-recognition
+opencv-python
+numpy
+pandas
+Flask
+mysql-connector-python`
